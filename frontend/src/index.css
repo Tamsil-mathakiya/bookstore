@@ -1,0 +1,233 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(173, 195, 197);
+  position: relative;
+}
+
+  /* navbar page css */
+
+.navbar{
+  background-color: #2a3c14;
+  color: white;
+  display: flex; 
+   justify-content: space-around;
+   padding: 10px;
+}
+.navbar ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar li{
+  list-style: none;
+  padding: 0 10px;
+  font-size: 17px;
+}
+
+/* login page css */
+/* register page css same class of the login page */
+.login {
+  position: relative;
+  left: auto;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 350px;
+  margin: auto;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  color: rgb(36, 7, 110);
+}
+.login label{
+    font-size: 20px;
+}
+.login input{
+    font-size: 15px;
+    outline: none; 
+    border: none;
+    padding: 8px 11px;
+    width: 80%;
+    border-radius: 8px
+}
+.login h1{
+  padding: 14px;
+}
+.button{
+  padding: 7px 12px;
+  margin-top: 15px;
+  background: rgb(121, 117, 141);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.button:hover{
+  font-size: 20.4px;
+}
+
+/* register page extra css  */
+.flex{
+  height: 420px;
+}
+/*  */
+.navbar .logout-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.navbar .logout-button:hover {
+  background-color: #0056b3;
+}
+/* product > nav page css*/
+.nav{
+  background-color: #2a3c14;
+  color: white;
+  display: flex; 
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 20px;
+}
+
+/* books page css */
+
+.books{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+  margin: 0;
+  gap: 20px;
+  overflow-y: auto;
+  overflow-x: hidden; 
+  height: 86vh;
+  width: 100vw; 
+}
+.book{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+  margin: 0;
+  background: #e8e6eb;
+  border-radius: 15px;
+}
+.book .image{
+  width: 100%;
+  height: 400px; 
+  overflow: hidden;
+}
+.image img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.order{
+  padding: 7px 12px;
+  background: rgb(121, 117, 141);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.price{
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+.footer {
+  background-color: #2a3c14;
+  position: fixed; 
+  padding: 12px;
+  bottom: 0;
+  width: 100%; 
+  color: white;
+  text-align: center; 
+  z-index: 10;
+}
+/* order page css */
+
+.main{
+  position: relative;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 100%;
+  margin: auto;
+  justify-content: center; 
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  background-color: antiquewhite;
+  border-radius: 15px;
+  color: rgb(36, 7, 110);
+}
+.main input{
+  font-size: 15px;
+    outline: none; 
+    border: none;
+    padding: 8px 11px;
+    width: 70%;
+    border-radius: 8px
+}
+.main h1{
+  padding: 13px;
+}
+.main .order{
+  margin: 13px;
+} 
+
+@media (max-width: 450px) {
+  .login{
+    width: 320px;
+    height: 400px;
+    top: 70px;
+  }
+  .navbar{
+     padding: 10px;
+  }
+  .navbar li{
+    padding: 0 10px;
+    font-size: 12px;
+  }
+  .navbar h2{
+    font-size: 14px;
+  }
+  .main{
+    width: 300px;
+    top: 70px;
+  }
+}
+@media (max-width: 500px) {
+
+  .nav{
+    gap: 5px;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 17.5px;
+  }
+  .nav .account{
+    position: absolute;
+    top: 8px;
+    align-self: flex-end;
+  }
+  .nav .line{
+    align-self: center;
+  }
+}
