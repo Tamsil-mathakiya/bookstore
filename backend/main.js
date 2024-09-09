@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-    
+
 mongoose.connect('mongodb://localhost:27017/timedb', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -26,7 +26,7 @@ const loginSchema = new mongoose.Schema({
         required: true,
     },
 });
-const login = new mongoose.model('login',loginSchema)
+const login = new mongoose.model('login', loginSchema)
 // Registration route
 app.post('/register', async (req, res) => {
     try {
@@ -55,15 +55,15 @@ app.post('/login', async (req, res) => {
             const existingLogin = await login.findOne({ email });
             if (existingLogin) {
                 res.status(200).json({ message: 'Login successful' });
-            }else{
-            const { email, password } = req.body;    
-            const newLogin = new login({
-            email,
-            password,
-        });
-        await newLogin.save();
-        res.status(200).json({ message: 'Login successful' });
-    }
+            } else {
+                const { email, password } = req.body;
+                const newLogin = new login({
+                    email,
+                    password,
+                });
+                await newLogin.save();
+                res.status(200).json({ message: 'Login successful' });
+            }
         } else {
             res.status(401).json({ message: 'Invalid email or password' });
         }
@@ -72,15 +72,15 @@ app.post('/login', async (req, res) => {
     }
 });
 app.post('/order', async (req, res) => {
-        const { name, number, bookName, price } = req.body
-        const newOrder = new Order({
-            name,
-            number,
-            bookName,
-            price
-        });
-        await newOrder.save();
-        res.status(200).json({ message: 'Order successful', order: newOrder });
+    const { name, number, bookName, price } = req.body
+    const newOrder = new Order({
+        name,
+        number,
+        bookName,
+        price
+    });
+    await newOrder.save();
+    res.status(200).json({ message: 'Order successful', order: newOrder });
 });
 
 app.listen(port, () => {

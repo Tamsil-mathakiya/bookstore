@@ -5,11 +5,12 @@ const Login = () => {
     const [data, setData] = useState({ email: "", password: "" });
     const navigate = useNavigate();
 
-    const handleChange = (e) => {
-        const { value, name } = e.target;
-        setData({ ...data, [name]: value });
-    };
 
+        const handleChange = (e) => {
+          const {name ,value} = e.target;
+          setData({...data, [name]: value});
+        }
+    
     const handleBtn = async () => {
         if (data.email.length > 3 && data.password.length > 3) {
             const response = await fetch("http://localhost:3000/login", {

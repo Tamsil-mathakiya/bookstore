@@ -97,8 +97,30 @@ body{
   color: white;
   display: flex; 
   justify-content: space-around;
-  padding: 10px;
+  padding: 8px;
   font-size: 20px;
+}
+img {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle; /* Aligns the image in the middle with surrounding text */
+}
+
+/* Adjust logo container if needed */
+.logo {
+  display: flex; /* Ensures proper alignment and centering */
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 15%;
+}
+
+/* Ensure no extra space around the image */
+.one {
+  width: 20%; 
+  height: auto; 
+  object-fit: cover;
+  
 }
 
 /* books page css */
@@ -108,7 +130,7 @@ body{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 20px 20px;
+  padding: 15px 20px;
   margin: 0;
   gap: 20px;
   overflow-y: auto;
