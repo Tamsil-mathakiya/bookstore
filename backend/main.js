@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const Register = require('./regiter'); // Adjust the path as necessary
 const Order = require('./order');
-const port = 5000;
+const port = 3000;
 const app = express();
 
 app.use(cors());
